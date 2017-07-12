@@ -1,11 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import logo from './logo.png';
-
 const Nav = () => (
-  <nav>
-    <Link to="/home"><img alt="logo" src={logo}/></Link>
+  <nav className="nav">
     <Link to="/discover">Découvrir</Link>
     <Link to="/movie">Films</Link>
     <Link to="/tv">Télévision</Link>

@@ -5,12 +5,17 @@ import styled from 'styled-components';
 import Nav from './components/Nav/Nav';
 import Input from './components/Input/Input';
 
+import logo from './logo.png';
+
 class Header extends Component {
   render() {
     return (
       <header className={this.props.className}>
         <div className="group">
-          <Nav />
+          <div className="content">
+            <h1 className="logo"><img src={logo}/></h1>
+            <Nav />
+          </div>
           <Input />
         </div>
       </header>
@@ -20,6 +25,19 @@ class Header extends Component {
 
 export default styled(Header)`
   background-color: #081c24;
+
+  .nav {
+    padding-top: 25px;
+  }
+  .logo {
+    float: left;
+    margin-right: 15px;
+  }
+  .content {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 15px 0;
+  }
   .group:after {
     content: "";
     display: table;
@@ -28,18 +46,11 @@ export default styled(Header)`
   a {
     color: white;
     text-decoration: none;
+    margin-right: 15px;
   }
   .logo {
     float: left;
   }
-  .searchBar[placeholder] {
-    font-style: italic;
-    font-family: source sans pro;
-    font-size: 18px;
-    font-weight: 300;
-    border: none;
-  }
-
   input[role] {
     display: inline-block;
     width: 100%;

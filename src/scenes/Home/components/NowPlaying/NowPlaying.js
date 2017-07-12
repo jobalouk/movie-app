@@ -24,11 +24,10 @@ export default class NowPlaying extends Component {
 
   render() {
     const { data } = this.state;
-    console.log(data);
 
     return (
       <Section className="media">
-        <button>Filtrer par popularité</button>
+
         <h2>Film à l'affiche</h2>
         {
           data.map((item, index) =>

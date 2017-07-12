@@ -1,4 +1,3 @@
-//global
 import React, { Component } from 'react';
 import Autocomplete from 'react-autocomplete';
 import styled from 'styled-components';
@@ -15,6 +14,7 @@ constructor(props) {
   }
 }
 
+// controlled component
 handleChange(e) {
   this.setState({
     value: e.target.value,
@@ -28,6 +28,7 @@ componentDidMount() {
   })
 }
 
+// utils
 matchStateToTerm(item, value) {
   return item.name.toLowerCase().indexOf(value.toLowerCase()) !== -1
 }

@@ -11,12 +11,13 @@ import Routes from './Routes.js';
 // components
 import Header from './components/Header/Header';
 import NowPlaying from './scenes/Home/components/NowPlaying/NowPlaying';
-import OnTheAir from './scenes/Home/components/OnTheAir/OnTheAir';
 
 // styled components
-const Wrapper = styled.main `
+const Main = styled.main `
   display: flex;
-  height: 100vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
 `;
 
 export default class App extends Component {
@@ -30,12 +31,12 @@ export default class App extends Component {
             <Routes />
           </div>
         </Router>
-          <Wrapper>
-            <Provider store={store}>
-              <OnTheAirContainer />
-            </Provider>
-            <NowPlaying />
-          </Wrapper>
+        <Main>
+          <Provider store={store}>
+            <OnTheAirContainer />
+          </Provider>
+          <NowPlaying />
+        </Main>
       </div>
     );
   }
