@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import Autocomplete from 'react-autocomplete';
-import styled from 'styled-components';
 
 //services
-import { getTv } from '../../../../services';
+import { getTv } from '../../../services';
 
 export default class Input extends Component {
 constructor(props) {

@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Provider } from 'react-redux';
-import OnTheAirContainer from "./containers/OnTheAirContainer";
 import store from './store';
+
+// container
+import OnTheAirContainer from "./containers/OnTheAirContainer";
 
 // routes
 import { BrowserRouter as Router} from 'react-router-dom'
@@ -13,12 +15,7 @@ import Header from './components/Header/Header';
 import NowPlaying from './scenes/Home/components/NowPlaying/NowPlaying';
 
 // styled components
-const Main = styled.main `
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-`;
+import Main from './scenes/Main'
 
 export default class App extends Component {
 
@@ -31,11 +28,13 @@ export default class App extends Component {
             <Routes />
           </div>
         </Router>
-        <Main>
-          <Provider store={store}>
-            <OnTheAirContainer />
-          </Provider>
-          <NowPlaying />
+        <Main className="group">
+          <div className="block_center group">
+            <Provider store={store}>
+              <OnTheAirContainer />
+            </Provider>
+            <NowPlaying />
+          </div>
         </Main>
       </div>
     );

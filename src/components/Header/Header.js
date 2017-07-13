@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 //components
-import Nav from './components/Nav/Nav';
-import Input from './components/Input/Input';
+import Nav from './components/Nav';
+import Input from './components/Input';
 
 import logo from './logo.png';
 
@@ -13,7 +13,7 @@ class Header extends Component {
       <header className={this.props.className}>
         <div className="group">
           <div className="content">
-            <h1 className="logo"><img src={logo}/></h1>
+            <h1 className="logo"><img alt="logo" src={logo}/></h1>
             <Nav />
           </div>
           <Input />
@@ -37,11 +37,6 @@ export default styled(Header)`
     width: 1000px;
     margin: 0 auto;
     padding: 15px 0;
-  }
-  .group:after {
-    content: "";
-    display: table;
-    clear: both;
   }
   a {
     color: white;

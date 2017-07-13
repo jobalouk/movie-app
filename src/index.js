@@ -12,10 +12,14 @@ import registerServiceWorker from './registerServiceWorker';
       font-family: source sans pro;
       background-color: #f4f4f4;
     }
-
     h1, h2, h3, h4 {
       margin: 0;
       padding: 0;
+    }
+    .group:after {
+      content: "";
+      display: table;
+      clear: both;
     }
   `
 
