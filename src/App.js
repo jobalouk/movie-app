@@ -1,5 +1,10 @@
+//global
 import React, { Component } from 'react';
+
+//styled component
 import styled from 'styled-components';
+
+//redux
 import { Provider } from 'react-redux';
 import store from './store';
 
@@ -13,6 +18,7 @@ import Routes from './Routes.js';
 // components
 import Header from './components/Header/Header';
 import NowPlaying from './scenes/Home/components/NowPlaying/NowPlaying';
+import Home from './scenes/Home/Home';
 
 // styled components
 import Main from './scenes/Main'
@@ -32,8 +38,9 @@ export default class App extends Component {
           <div className="block_center group">
             <Provider store={store}>
               <OnTheAirContainer />
+
             </Provider>
-            <NowPlaying />
+
           </div>
         </Main>
       </div>
